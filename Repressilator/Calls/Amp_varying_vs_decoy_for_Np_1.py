@@ -22,7 +22,7 @@ def amp_ratio_computation(save_data=True):
     vec = [10.0, 0.0, 10.0, 0.0, 0.0, 0.0]
     t = arange(0, 1000, 0.01)
     Np = 1.0
-    eps_all = np.array([10.0])
+    eps_all = np.array([0.1, 1.0, 10.0])
     # without decoys
     for eps in eps_all:
         Nd = 0.0
