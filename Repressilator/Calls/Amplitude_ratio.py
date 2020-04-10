@@ -49,6 +49,7 @@ def amp_ratio_computation(save_data=True):
         if min(Amp_ratio) == 0.0:
             print("steady state detected!")
         if save_data:
+            dirname = "../Data/"
             fname = "Amp_ratio_vs_decoy_Np_%d_eps_%1.1f_with_Np_ref_1" % (Np, eps)
             fname = fname.replace(".", "_")
             fname = fname + ".h5"
