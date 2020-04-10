@@ -50,7 +50,7 @@ def amp_ratio_computation(save_data=True):
             print("steady state detected!")
         if save_data:
             dirname = "../Data/"
-            fname = "Amp_ratio_vs_decoy_Np_%d_eps_%1.1f_with_Np_ref_1" % (Np, eps)
+            fname = "Amp_ratio_vs_decoy_Np_%d_eps_%1.1f" % (Np, eps)
             fname = fname.replace(".", "_")
             fname = fname + ".h5"
             hf = h5py.File(dirname + fname, 'w')
@@ -68,7 +68,7 @@ def plot_amp_variation():
     Np_all = np.array([1.0, 2.0, 3.0])
     eps = 1.0
     for Np in Np_all:
-        fname = "Amp_ratio_vs_decoy_Np_%d_eps_%1.1f_with_Np_ref_1" % (Np, eps)
+        fname = "Amp_ratio_vs_decoy_Np_%d_eps_%1.1f" % (Np, eps)
         fname = fname.replace(".", "_")
         fname = fname + ".h5"
         label = r"$N_p = %1d$" % Np
