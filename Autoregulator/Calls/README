@@ -1,0 +1,25 @@
+Auto regulation model
+
+(Please contact for further information and preprint of the paper)
+
+The model has been defined in our paper entitled "Tunability enhancement of 
+gene regulatory motifs through competition for regulatory protein resources" 
+(currently under review).
+
+This folder contains scripts written in python which generate the results 
+reported in the paper.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+1. Auto_reg.py - 
+this code generates time evolution of the motif at the given set of parameters.
+ In particular, it produces the plot in Fig. 2(A) in the paper.
+--
+2. Half_times_Nps_Nd_0.py and Half_times_computations_Nps_Nds.py -
+these codes compute half-times to reach steady states for a given
+gene copy numbers and decoy sites and generates data for the plots in Fig 2(B) 
+and Fig 1(A) in the accompanying supplementary text.
+--
+3. Plot_half_times_Nps_Nd_0.py and Plot_half_times.py - 
+these scripts produce the plots in Fig 2(B) and Fig 1(A) in the accompanying 
+supplementary text.
