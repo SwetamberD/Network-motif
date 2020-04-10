@@ -12,7 +12,7 @@ import h5py
 # Main
 ###############################################################################################
 def main():
-    amp_ratio_computation(save_data=True)
+    #amp_ratio_computation(save_data=True)
     plot_amp_variation(save_fig=True)
 
 ###############################################################################################
@@ -75,15 +75,17 @@ def plot_amp_variation(save_fig=True):
         fname = fname.replace(".", "_")
         fname = fname + ".h5"
         hf = h5py.File(open_dir + fname, 'r')
-        decoy_nr = hf.get('Nd_all')
+        decoy_nr = hf.get('Nd')
         decoy_nr = np.array(decoy_nr)
         Amp_ratio = hf.get('Amp_ratio')
         Amp_ratio = np.array(Amp_ratio)
         hf.close()
+        label = r"$\epsilon = %1.1f$" % eps
         plt.plot(decoy_nr,Amp_ratio, label=label)
     plt.xlabel(r"$N_d$")
     plt.legend()
     plt.ylabel("Amplitude ratio")
+
     Amp_ratio_ref = decoy_nr * 0.0 + 1.0
     plt.plot(decoy_nr, Amp_ratio_ref, '--k')
     if save_fig:
@@ -92,6 +94,8 @@ def plot_amp_variation(save_fig=True):
         figname = figname + ".pdf"
         save_dirname1 = "../Plots/"
         plt.savefig(save_dirname1 + figname)
+        print("saved:", figname)
+    plt.show()
 ########################################################################################################################
 # Model_repressilator
 ########################################################################################################################
@@ -111,7 +115,6 @@ def model_repressilator(vec,t, Np, Nd, eps):
     # Parameters
     r1 = 1.0
     r2 = eps
-
     Np_r = Np * 10**-2
     Nd_r = Nd * 10**-2
 
@@ -129,8 +132,8 @@ def model_repressilator(vec,t, Np, Nd, eps):
     dm3 = kappa * Np_r / (1 + x2 ** 2) - m3
 
     return [dx1, dm1, dx2, dm2, dx3, dm3]
-###############################################################################################
-###############################################################################################
+########################################################################################################################
+########################################################################################################################
 
 if __name__ == "__main__":
     main()
