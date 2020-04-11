@@ -1,0 +1,34 @@
+# Network-motif/Repressilator
+
+Repressilator
+Last modified on April 11, 2020.
+
+(Please contact for further information and preprint of the paper)
+
+The model has been defined in our paper entitled "Tunability enhancement of 
+gene regulatory motifs through competition for regulatory protein resources" 
+(currently under review).
+
+This folder contains scripts written in python which generate the results for
+the repressilator reported in the paper.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+1. solve_model_with_decoys.py  
+   this code solves the model and plots the time evolution reproducing Figs. 
+   5(C) and 5(D). 
+
+2. Stability_diagram_Np_Nd.py
+   this codes generates the stability daigram (Fig. 5 (B)).
+
+3. Hopf_freq_Np_Nd.py
+   this codes generates th results of Hopf frequency computation and reproduces 
+   plot in Fig. 6(A).
+
+4. Amplitude_ratio.py
+   this code computes and plots the amplitude ratios (Fig. 6(B)).
+
+5. Amp_varying_vs_decoy_for_Np_1.py
+   this code computes and plots the amplitude ratio for varying binding
+   affinities (SI Fig. 1(C)).
+

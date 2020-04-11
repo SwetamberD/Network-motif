@@ -1,0 +1,36 @@
+# Network-motif/Toggle_switch
+
+Toggle model
+Last modified on April 11, 2020.
+
+(Please contact for further information and preprint of the paper)
+
+The model has been defined in our paper entitled "Tunability enhancement of 
+gene regulatory motifs through competition for regulatory protein resources" 
+(currently under review).
+
+This folder contains scripts written in python which generate the results for
+the toggle switch reported in the paper.
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
+1. Basin_attraction_variation_with_Np_Nd.py
+   this code computes separatrices for different Np's and Nd's
+
+2. Plot_basin_of_attraction_Nps_Nds.py
+   this code plots the data computed and regenerates the Figs. 4(A) and 4(C).
+
+3. Nulc_lines_plotter.py
+   this code plots he nulc lines (Fig. 3B).
+
+4. Time_evolution_model.py
+   this codes solves the model and plots its time evolution. Use this to
+   reproduce Figs. 3(C), 4(B), and 4(D).
+
+5. Basin_attraction_for_binding_affinities.py
+   this code computes separatrices for various binding affinites (for SI).
+
+6.  Plot_basin_of_attraction_binding_affinity.py
+    this codes reproduces the plot in SI Fig 1(B).
+
+

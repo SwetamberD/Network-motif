@@ -1,13 +1,13 @@
-# Network-motif/Toggle_switch
+# Network-motif/Repressilator
 
-Toggle switch model
+Repressilator 
 
 (Please contact for further information and preprint of the paper)
 
 Last modified on April 11, 2020.
 
 This folder contains scripts written in python which generate the results 
-for the toggle switch. 
+for the repressilator. 
 
 1. All scripts are the in folder "Calls".
 2. All data are in the folder "Data".
