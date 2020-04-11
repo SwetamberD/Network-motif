@@ -11,8 +11,8 @@ import h5py
 # Main
 ###############################################################################################
 def main():
-    amp_ratio_computation(save_data=True)
-    plot_amp_variation()
+    #amp_ratio_computation(save_data=True)
+    plot_amp_variation(save_fig=True)
 
 ###############################################################################################
 # Amplitude ratio computations
@@ -63,7 +63,7 @@ def amp_ratio_computation(save_data=True):
 # Plot
 ###############################################################################################
 
-def plot_amp_variation():
+def plot_amp_variation(save_fig=True):
     open_dir = "../Data/"
     Np_all = np.array([1.0, 2.0, 3.0])
     eps = 1.0
@@ -73,7 +73,7 @@ def plot_amp_variation():
         fname = fname + ".h5"
         label = r"$N_p = %1d$" % Np
         hf = h5py.File(open_dir + fname, 'r')
-        decoy_nr = hf.get('Nd_all')
+        decoy_nr = hf.get('Nd')
         decoy_nr = np.array(decoy_nr)
         Amp_ratio = hf.get('Amp_ratio')
         Amp_ratio = np.array(Amp_ratio)
@@ -86,19 +86,17 @@ def plot_amp_variation():
     plt.plot(decoy_nr, Amp_ratio_ref, '--k')
     plt.legend()
     if save_fig:
-        figname = "Amplitude_variation_with_Np_1_2_3_eps_%1.1f_Np_ref_1"% eps
+        figname = "Amplitude_variation_with_Np_1_2_3_eps_%1.1f"% eps
         figname = figname.replace(".", "_")
         figname = figname + ".pdf"
         save_dirname1 = "../Plots/"
-        # save_dirname2 = "../../../Fig_files/Fig_Repressilator/"
         plt.savefig(save_dirname1 + figname)
-        # plt.savefig(save_dirname2 + figname)
         print("saved:", figname)
-    #plt.show()
+    plt.show()
+    
 ###############################################################################################
 # Model_repressilator
 ###############################################################################################
-
 def model_repressilator(vec,t, Np, Nd, eps):
 
     x1 = vec[0]
